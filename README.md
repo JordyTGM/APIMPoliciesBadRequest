@@ -1,13 +1,11 @@
 # APIMPoliciesBadRequest AZURE APIM
 Configuracion de APIM para control y redireccion de la respuesta bad request de la petición a otro servicio.
 TEXTO XML:
+- Policies are applied in the order they appear.
+- Position <base/> inside a section to inherit policies from the outer scope.
+- Comments within policies are not preserved.
+- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements
 
-<!--
-    - Policies are applied in the order they appear.
-    - Position <base/> inside a section to inherit policies from the outer scope.
-    - Comments within policies are not preserved.
--->
-<!-- Add policies as children to the <inbound>, <outbound>, <backend>, and <on-error> elements -->
 <policies>
     <!-- Throttle, authorize, validate, cache, or transform the requests -->
     <inbound>
